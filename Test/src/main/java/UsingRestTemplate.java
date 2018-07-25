@@ -8,22 +8,6 @@ import java.util.List;
  */
 
 public class UsingRestTemplate implements CommentWebServiceClient {
-
-    /**
-     * http://localhost:8080/api/comment
-     *
-     * Content-Type: application/json
-     *
-     * {
-     "name": "Florin2",
-     "email": "stancu.florin23@gmail.com",
-     "comment": "test",
-     "date": "2016-01-02"
-     }
-     *
-     * @param comment
-     * @return
-     */
     public Comment save(Comment comment) {
         RestTemplate restTemplate = new RestTemplate();
 
@@ -44,13 +28,6 @@ public class UsingRestTemplate implements CommentWebServiceClient {
 
         return null;
     }
-
-    /**
-     * http://localhost:8080/api/comment/4
-     *
-     * @param commentId
-     * @return
-     */
 
     public Comment findById(Long commentId) {
         RestTemplate restTemplate = new RestTemplate();
