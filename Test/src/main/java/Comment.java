@@ -70,7 +70,7 @@ public class Comment {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", comment='" + comment + '\'' +
+                ", bllablalala='" + comment + '\'' +
                 ", date=" + date + '\'' +
                 ", _links=" + _links +
                 '}';
