@@ -98,7 +98,13 @@ public class Main {
 
     def arr1 = version1.split("\\.")
     def arr2 = version2.split("\\.")
-
+    while(vals1.size() != vals2.size()) {
+		if(vals1.size() < vals2.size()) {
+			vals1.add("0");
+		} else {
+			vals2.add("0");
+		}
+	}
     int i = 0
 
     while (i < arr1.length || i < arr2.length) {
