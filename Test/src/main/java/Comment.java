@@ -89,5 +89,4 @@ public class Comment {
 
 }
 
-
-
+https://github.com/MachineLearning-lover/Java/tree/master/planning/src/main/java/com/vmi/planning/Entities
