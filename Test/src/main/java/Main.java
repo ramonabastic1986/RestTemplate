@@ -129,5 +129,30 @@ public class Main {
 
     return 0
 }
+	
+	 public static String getV(String value) {
+        if (value == null || value.isEmpty()) {
+            throw new RuntimeException("The input is not valid");
+        }
+
+//        String[] values = value.split(",");
+        List<String> tags = Arrays.asList(value.split(","));
+        Map<String, String> tagss = new HashMap<String, String>();
+
+
+        Pattern pattern = Pattern.compile("/:[\n\t\r ]*/");
+        for (String st : tags) {
+            Matcher matcher = pattern.matcher(st);
+            if (!matcher.find()) {
+                throw new RuntimeException("Value doesn't matches");
+            }
+
+            String[] d = st.split("/:[\n\t\r ]*/");
+            tagss.put(d[0], d[1]);
+        }
+
+
+        return "";
+    }
 }
 
