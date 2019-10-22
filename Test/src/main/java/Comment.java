@@ -89,4 +89,27 @@ public class Comment {
 
 }
 
+public void sortRoutea() {
+        List<RouteDefinition> routes = camelContext.getRoutes();
+        List<RouteDefinition> nonNules = routes.stream().filter(item -> item != null).collect(Collectors.toList());
+
+        // todo
+        Collections.sort(nonNules, (route1, route2) ->  reverseCompare(route1.getFirst(), route2.getFirst()))
+    }
+
+    public static int reverseCompare(Integer one, Integer two) {
+        int result = Integer.compare(rone, two);
+
+        if (result == 1) {
+            return -1;
+        }
+
+        if (result == -1) {
+            return 1;
+        }
+
+        return 0;
+    }
+    
+    
 https://github.com/MachineLearning-lover/Java/tree/master/planning/src/main/java/com/vmi/planning/Entities
